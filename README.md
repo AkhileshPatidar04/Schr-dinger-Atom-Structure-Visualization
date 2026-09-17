@@ -15,6 +15,7 @@ An interactive, real-time 3D quantum mechanical simulation and visualization of 
 
 ### Real-Time Electron Probability Density Cloud
 ![Schrödinger Atomic Orbital Preview](orbital_preview.png)
+![Schrödinger Atomic Orbital Preview](orbital_preview_2.png)
 *3D point-cloud representation of electron probability distribution $|\psi|^2$ rendered with additive blending and phase sign coloring.*
 
 ### 🌌 Orbital Gallery (Screenshot Showcase)
