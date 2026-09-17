@@ -1,0 +1,41 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 21, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "windows-vcpkg",
+      "displayName": "Windows x64 (vcpkg, Debug)",
+      "description": "Configures with Ninja using the vcpkg manifest for dependencies. Requires the VCPKG_ROOT environment variable to be set.",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "VCPKG_TARGET_TRIPLET": "x64-windows"
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
+      "name": "windows-vcpkg-release",
+      "displayName": "Windows x64 (vcpkg, Release)",
+      "inherits": "windows-vcpkg",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "windows-vcpkg",
+      "configurePreset": "windows-vcpkg"
+    },
+    {
+      "name": "windows-vcpkg-release",
+      "configurePreset": "windows-vcpkg-release"
+    }
+  ]
+}

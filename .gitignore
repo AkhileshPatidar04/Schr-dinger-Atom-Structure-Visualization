@@ -1,0 +1,41 @@
+# Build artifacts
+build/
+bin/
+out/
+CMakeScripts/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Visual Studio & IDE files
+.vs/
+.vscode/
+*.sln.docstates
+*.user
+*.suo
+*.userosscache
+*.VC.db
+*.opendb
+
+# vcpkg dependencies
+vcpkg_installed/
+
+# Compiled binaries and debug symbols
+*.exe
+*.obj
+*.ilk
+*.pdb
+*.idb
+*.o
+*.a
+*.lib
+*.dll
+
+# Heavy uncompressed screenshot dumps (keep .png)
+*.bmp
+
+# OS generated files
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
